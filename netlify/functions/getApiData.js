@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 exports.handler = async function (event, context) {
   const API_TOKEN = process.env.API_TOKEN;
