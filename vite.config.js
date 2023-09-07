@@ -13,6 +13,9 @@ export default defineConfig({
   },
   server: {
     port: 9090, // will be used if available, or the next free one if not
+    proxy: {
+      '/.netlify/functions/': 'http://localhost:9090',
+    },
   },
   build: {
     emptyOutDir: true,
