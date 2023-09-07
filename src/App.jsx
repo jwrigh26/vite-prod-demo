@@ -7,6 +7,7 @@ let fetched = false;
 
 function App() {
   const [count, setCount] = useState(0);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,7 +15,8 @@ function App() {
       try {
         const response = await fetch('/.netlify/functions/getApiData');
         const data = await response.json();
-        console.log(data);
+        console.log(data?.message);
+        setData(data?.message);
       } catch (error) {
         console.error('There was an error fetching the data', error);
       }
@@ -50,6 +52,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <p>{data}</p>
     </>
   );
 }

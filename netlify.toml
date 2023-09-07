@@ -1,4 +1,9 @@
 [dev]
   command = "npm run start"
+  # Port that runs the netlify App
   port = 9090
+  # Port that Vite.js runs on
+  targetPort = 5173
   functions = "netlify/functions"
+
+# Next make a npm run for prod

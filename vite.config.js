@@ -12,7 +12,7 @@ export default defineConfig({
     // Additional SWC options can be provided here as needed.
   },
   server: {
-    port: 9090, // will be used if available, or the next free one if not
+    port: 5173, // will be used if available, or the next free one if not
     proxy: {
       '/.netlify/functions/': 'http://localhost:9000',
     },
