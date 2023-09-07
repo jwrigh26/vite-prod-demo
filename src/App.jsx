@@ -10,6 +10,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log('fetching data');
       try {
         const response = await fetch('/.netlify/functions/getApiData');
         const data = await response.json();

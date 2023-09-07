@@ -1,0 +1,4 @@
+[dev]
+  command = "npm run start"
+  port = 9090
+  functions = "netlify/functions"
